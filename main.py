@@ -1,12 +1,12 @@
 class Factors():
         
     def __init__(self):
-        self.x = int(input('Enter only two factors: '))
-        self.y = int(input('Enter only two factors: '))        
+        self.x = int(input('Enter only one factor: '))
+        self.y = int(input('Enter only one factor: '))        
+
 
 class Calculator(Factors):
     
-        
     def addition(self):
         return self.x + self.y
 
@@ -16,13 +16,15 @@ class Calculator(Factors):
         
     
     def division(self):
-        return self.x / self.y
+        return self.x / self.y if self.y != 0 else "Division by zero"
         
     
     def multiplication(self):
         return self.x * self.y
 
 
+class Result(Calculator):
+    
     def show(self):
         x=self.x
         y=self.y
@@ -39,5 +41,5 @@ class Calculator(Factors):
     
 
 if __name__ == "__main__":
-    calculator = Calculator()
-    calculator.show()
+    Result().show()
+   
