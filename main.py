@@ -27,10 +27,10 @@ class Calculator(Factors):
         x=self.x
         y=self.y
     
-        addition = calculator.addition()
-        subtraction = calculator.subtraction()
-        division = calculator.division()
-        multiplication = calculator.multiplication()
+        addition = self.addition()
+        subtraction = self.subtraction()
+        division = self.division()
+        multiplication = self.multiplication()
     
         print(f'\n{x} + {y} = {addition}\n')    
         print(f'{x} - {y} = {subtraction}\n')
